@@ -3,7 +3,7 @@ const database = require('../database.js');
 
 const typeDefs = gql`
   type Supply {
-    id: String
+    id: String!
     team: Int
   }
 `;

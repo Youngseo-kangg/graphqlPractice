@@ -2,11 +2,11 @@ const { gql } = require('apollo-server');
 const database = require('../database.js');
 
 const typeDefs = gql`
-  type Equipment {
-    id: String
-    used_by: String
+  type Equipment implements Tool {
+    id: String!
+    used_by: Role!
     count: Int
-    new_or_used: String
+    new_or_used: NewOrUsed!
   }
 `;
 
